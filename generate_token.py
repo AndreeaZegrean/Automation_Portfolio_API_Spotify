@@ -1,14 +1,13 @@
-import requests as requests
+import requests
 from selenium.webdriver.common.by import By
 from browser import Browser
 
-
 class Generate_token(Browser):
-    CLIENT_ID = "bbfd54ee1ef84bb99a9d438948ae8ff4"
-    CLIENT_SECRET = "6aca16c7b09a440aaa8068227eb65f4c"
+    CLIENT_ID = "302fa0c6c00c481caa7099ebfabe3969"
+    CLIENT_SECRET = "f3be51a3772b4d5f9c1dc36bcf195f7a"
     RESPONSE_TYPE= "code"
     ENCODED_REDIRECT_URI = "http%3A%2F%2Fitfactory.ro%2Fcallback"
-    REDIRECT_URI = "http://itfactory.ro/callback"
+    REDIRECT_URI = "https://oauth.pstmn.io/v1/browser-callback"
     SCOPE = "ugc-image-upload user-read-playback-state user-modify-playback-state user-read-currently-playing app-remote-control streaming playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public user-follow-modify user-follow-read user-read-playback-position user-top-read user-read-recently-played user-library-modify user-library-read user-read-email user-read-private"
     HOST = "https://accounts.spotify.com"
     USERNAME = (By.ID,"login-username")
@@ -22,18 +21,18 @@ class Generate_token(Browser):
         return endpoint
 
     def load_endpoint(self):
-        self.chrome.get(self.create_authorize_endpoint())
+        self.driver.get(self.create_authorize_endpoint())
 
     def login_to_spotify(self):
-        self.chrome.find_element(*self.USERNAME).send_keys("meet@itfactory.ro")
-        self.chrome.find_element(*self.PASSSWORD).send_keys("meetitfactorytest")
-        self.chrome.find_element(*self.LOG_IN_BUTTON).click()
+        self.driver.find_element(*self.USERNAME).send_keys("deea2904@gmail.com")
+        self.driver.find_element(*self.PASSSWORD).send_keys("Andreea29041988")
+        self.driver.find_element(*self.LOG_IN_BUTTON).click()
 
     def authorize_login(self):
-        self.chrome.find_element(*self.AGREE_BUTTON).click()
+        self.driver.find_element(*self.AGREE_BUTTON).click()
 
     def get_code(self):
-        url = self.chrome.current_url
+        url = self.driver.current_url
         code = url[url.index("=")+1:]
         return code
 
