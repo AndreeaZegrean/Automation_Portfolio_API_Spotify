@@ -2,18 +2,21 @@ API Testing - Project Spotify
 
 The scope of this project is to use all API knowledge gained throught the Software Testing course and apply them in practice, using a live application.
 
-Application under test: The Spotify Web API provides a wide range of functionality for developers, including:
+This API provides access to a wide range of functionality and data allowing developers to integrate and extend Spotify's functionality in their applications: 
+- getting detailed information about songs, albums, artists and playlists, 
+- generating music suggestions based on user preferences or characteristics specific songs or artists, 
+- allows users to create, update and delete playlists. They can also add or remove songs from playlists.
+- control music playback on different devices connected to the user's Spotify account, including pause, play, skip forward or back.
+- allows users to add or remove songs and albums from their personal library.
 
-- Retrieve data from your favorite artist, album, or show.
-- Search for Spotify content.
-- Control and interact with the playback, play and resume, seek to a position, or retrieve your queue.
-- Manage your personal library by creating a new playlist and adding your favorite tracks to it.
-- Get recommendations based on the music you listen to the most.
-- And much more! You can find a complete list of available endpoints in the API Reference. For more details about documentation, visit this website.
+To run the application, you need:
+- You need to have Python installed, at least the version 3.12
+- pip is the package manager for Python.
+- You need to create a virtual environment (venv) before running the application
 
-Tools used: Postman, Pycharm.
+Tools used: Pycharm.
 
-Link to collection: ........
+Link to collection: https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify
 
 Created token
 

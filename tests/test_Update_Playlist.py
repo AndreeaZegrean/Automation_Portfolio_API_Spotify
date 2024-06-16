@@ -1,21 +1,19 @@
-from random import random
-
-from requests_folder.playlist.get_playlist import get_playlist, create_playlist
+import pytest
 from requests_folder.playlist.update_playlist import update_playlist
 
-
-class TestUpdatePlaylist():
+class TestUpdatePlaylist:
     def test_update_playlist(self):
-        random_number = random.randint(0, 999999)
-        name = f"New Playlist {random_number}'
-        description = f'New Playlist description {random_number}'
-        playlist_id = create_playlist(name, description).json()['id']
+        playlist_id = '1qISrmv0EN157fcAD0NOaE'
+        new_name = 'Playlist Deea'
+        new_description = 'This playlist has been updated using Spotify API'
+        new_public_status = False
 
-        updated_name = f'Updated Playlist {random_number}'
-        updated_description = f'Updated playlist description {random_number}'
-        response = update_playlist(playlist_id, updated_name, updated_description)
+        update_response = update_playlist(playlist_id, new_name, new_description, new_public_status)
 
-        assert response.status_code == 200, f'Update Playlist API did not work, Response status code: {response.status_code}'
-        playlist = get_playlist(playlist_id).json()
-        assert playlist['name'] == updated_name
-        assert playlist['description'] == updated_description or playlist['description'] == ""
+        assert update_response is not None, 'Failed to update playlist'
+        assert update_response['name'] == new_name, 'Playlist name does not match'
+        assert update_response['description'] == new_description, 'Playlist description does not match'
+        assert update_response['public'] == new_public_status, 'Playlist visibility does not match'
+
+    if __name__ == "__main__":
+        pytest.main()
