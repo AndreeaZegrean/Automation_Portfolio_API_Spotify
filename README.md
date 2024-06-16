@@ -38,6 +38,7 @@ pip install -r requirements.txt
 In the generate_token file, enter the data we obtained at point 1 (Created token)
 
 [](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\4.png)
+poza 4
 
 **3. Authentication end authorization**
 
@@ -56,14 +57,17 @@ For more information you can follow the following URLs:
 
 **4. Creating requests end running the tests**
 
-The requests can be found in the requests_folder. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests
+The requests can be found in the **requests_folder**. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests
 
 [](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\3.png)
-The tests can be found in the tests folder. To run any test, you can run the corresponding file.
+poza 3
+
+The tests can be found in the **tests folder**. To run any test, you can run the corresponding file.
 For example, I have attached a screenshot from the test_get_album.py file. To run all the tests in the file, click on the green triangle next to the TestGetAlbum class.
 If you want to run a single test, press the green triangle next to the function that describes the desired test, for example the function: def test_get_album_does_not_exist(self):
 
 [](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\2.png)
+poza 2
 
 **5. Generating the report**
 
