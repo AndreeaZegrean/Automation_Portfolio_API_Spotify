@@ -14,25 +14,33 @@ To run the application, you need:
 - pip is the package manager for Python.
 - You need to create a virtual environment (venv) before running the application
 
-Tools used: Pycharm.
+Tools used: Postman, Pycharm.
 
 Link to collection: https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify
 
-Created token
+**1. Created token**
 
-First steps:
 - Go to Spotify and create a new user account.
-- Access the dashboard and log in with the user account you created.
+- Access the [dashboard](https://developer.spotify.com/dashboard) and log in with the user account you created.
 - Click on the "Create an app" button.
 - Enter a name and description for the new application created.
-- Accept the terms and conditions and click on the create button.
+- Accept "Terms and Conditions" and click on the create button.
 - In the opened window, click on "Edit Settings."
 - In the Redirect URIs textbox, enter a link. It doesn't have to be specific, but one that can be used later. Example: http://applicationcourse/callback.
 - Click on the SAVE button at the bottom.
 
-Second steps:
-- Open Postman aplication,you can download this Postman and create a new collection named "Spotify."
-- Within the collection, create a new POST request.
+**2. Installation and running**
+
+- Create a folder in your computer where you'd like to store the code to run the app.
+- The libraries used are requests (version 2.31), pytest (version 8.2), selenium (version 4.21), seleniumbase (version 4.27.5). To install them, run the Terminal command:
+pip install -r requirements.txt
+
+In the generate_token file, enter the data we obtained at point 1 (Created token)
+
+[](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\4.png)
+
+**3. Authentication end authorization**
+
 - Click on authorization and select from the dropdown type OAuth 2.0.
 - In the Callback URL field, enter the Redirect URIs from the first steps. If you are using the Postman web app, you don't need to set it.
 - Copy the Client ID and Client Secret from your application and paste them into Postman.
@@ -40,28 +48,24 @@ Second steps:
 - In the Access Token URL field, enter the link https://accounts.spotify.com/api/token. After that, put the link https://accounts.spotify.com/authorize in the Auth URL field, and enter the text "playlist-modify-public playlist-read-private playlist-modify-private" in the Scope field.
 - Finally, press "Get New Access Token". The token has been created.
 
-Types available for testing
+To obtain the access token, you need to run the generate_token.py file and follow the steps described.
 
-HTTP methods supported by this API are GET, POST, PUT, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
-- GET Requests: .......... ce testam
-- POST Requests: Create new playlists,etc.....
-- PUT and PATCH Requests: Update existing data, modify playlists, etc.
-- DELETE Requests: Remove playlists, tracks, etc.
+For more information you can follow the following URLs:
+- Spotify API authorization guide: https://developer.spotify.com/documentation/web-api/concepts/authorization
+- Google OAuth2 authorization standard: https://pkg.go.dev/golang.org/x/oauth2/google
 
-Tests used for validation
+**4. Creating requests end running the tests**
 
-For this API, an authentication token is needed.
+The requests can be found in the requests_folder. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests
 
-I send responses to some endpoints:
+[](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\3.png)
+The tests can be found in the tests folder. To run any test, you can run the corresponding file.
+For example, I have attached a screenshot from the test_get_album.py file. To run all the tests in the file, click on the green triangle next to the TestGetAlbum class.
+If you want to run a single test, press the green triangle next to the function that describes the desired test, for example the function: def test_get_album_does_not_exist(self):
 
-- https://api.spotify.com/v1/users/{user_id}/playlists (Create playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add Item to playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Update Item to playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id} (Get playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Remove playlistItem)
-- https://api.spotify.com/v1/playlists/{playlist_id} (Change playlist details)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add item in playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/followers (Follow playlist)
-- Using all available HTTP methods.
-- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
+[](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\2.png)
 
+**5. Generating the report**
+
+To generate the report, run the Terminal command: pytest --html=report.html
+An HTML file will be created in the project main directory, which can be opened with any browser.
