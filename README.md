@@ -39,8 +39,10 @@ In the generate_token file, enter the data we obtained at point 1 (Created token
 
 [](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\4.png)
 poza 4
+'![](C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\4.png)'
 
-**3. Authentication end authorization**
+
+**3. Authentication and authorization**
 
 - Click on authorization and select from the dropdown type OAuth 2.0.
 - In the Callback URL field, enter the Redirect URIs from the first steps. If you are using the Postman web app, you don't need to set it.
@@ -55,7 +57,7 @@ For more information you can follow the following URLs:
 - Spotify API authorization guide: https://developer.spotify.com/documentation/web-api/concepts/authorization
 - Google OAuth2 authorization standard: https://pkg.go.dev/golang.org/x/oauth2/google
 
-**4. Creating requests end running the tests**
+**4. Creating requests and running the tests**
 
 The requests can be found in the **requests_folder**. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests
 
