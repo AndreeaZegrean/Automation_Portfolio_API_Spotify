@@ -64,7 +64,7 @@ The tests can be found in the **tests folder**. To run any test, you can run the
 For example, I have attached a screenshot from the test_get_album.py file. To run all the tests in the file, click on the green triangle next to the TestGetAlbum class.
 If you want to run a single test, press the green triangle next to the function that describes the desired test, for example the function: def test_get_album_does_not_exist(self):
 
-(<img src="C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\assets\2.png"/>)
+[](<img src="C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\assets\2.png"/>)
 
 **5. Generating the report**
 
