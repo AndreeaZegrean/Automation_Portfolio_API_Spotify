@@ -1,4 +1,4 @@
-API Testing - Project Spotify
+**API Testing - Project Spotify**
 
 The scope of this project is to use all API knowledge gained throught the Software Testing course and apply them in practice, using a live application.
 
@@ -37,7 +37,8 @@ pip install -r requirements.txt
 
 In the generate_token file, enter the data we obtained at point 1 (Created token)
 
-<img src="C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\assets\4.png"/>
+![4](https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify/assets/149403601/2e7b638a-0369-4869-ad69-798c818aae7a)
+
 
 **3. Authentication and authorization**
 
@@ -56,15 +57,16 @@ For more information you can follow the following URLs:
 
 **4. Creating requests and running the tests**
 
-The requests can be found in the **requests_folder**. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests
+The requests can be found in the **requests_folder**. The [documentation](https://developer.spotify.com/documentation/web-api/reference/get-an-album) was used to write the requests.
 
-<img src="C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\assets\3.png"/>
+![2](https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify/assets/149403601/b4618f61-6d49-4467-8c0a-8057c7a59ebf)
+
 
 The tests can be found in the **tests folder**. To run any test, you can run the corresponding file.
 For example, I have attached a screenshot from the test_get_album.py file. To run all the tests in the file, click on the green triangle next to the TestGetAlbum class.
-If you want to run a single test, press the green triangle next to the function that describes the desired test, for example the function: def test_get_album_does_not_exist(self):
+If you want to run a single test, press the green triangle next to the function that describes the desired test, for example the function: def _test_get_album_does_not_exist(self)_:
 
-[](<img src="C:\Users\deea2\PycharmProjects\pythonProject\pythonProject\Examen_Final_Spotify\assets\2.png"/>)
+![3](https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify/assets/149403601/e8bf5c8b-c632-40b9-922a-1b49e9d8e92a)
 
 **5. Generating the report**
 
