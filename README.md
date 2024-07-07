@@ -68,7 +68,16 @@ If you want to run a single test, press the green triangle next to the function 
 
 ![3](https://github.com/AndreeaZegrean/Automation_Portfolio_API_Spotify/assets/149403601/e8bf5c8b-c632-40b9-922a-1b49e9d8e92a)
 
-**5. Generating the report**
+**5. Generating the report and conclusions**
 
-To generate the report, run the Terminal command: pytest --html=report.html
+To generate the report, run the Terminal command: _pytest --html=report.html_
 An HTML file will be created in the project main directory, which can be opened with any browser.
+
+Due to an authentication problem while running the report for the tests performed, the report could **not** be generated.
+
+After logging into the Spotify page, an additional login page recently appeared asking for verification via an emailed code (to confirm I'm not a robot). This verification procedure is a major obstacle because it interferes with the automation of the testing process and can cause significant delays in the delivery of the software product.
+
+This issue is a product risk and may have the following implications:
+- **Delays in the Testing Process**: The time required to complete additional verification affects the efficiency and speed of automated testing.
+- **Security Risks**: The manual verification process can introduce additional risks if not managed properly.
+- **Impact on Delivery**: Delays in testing can lead to delays in delivery of the final product to customers.
