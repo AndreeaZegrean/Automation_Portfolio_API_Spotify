@@ -37,7 +37,7 @@ class Generate_token(Browser):
         return code
 
     def get_token(self):
-        header = {'Content-Type': 'application/x-www-form-urlencoded'}
+        header = {"Content-Type": 'application/x-www-form-urlencoded'}
         data = {
                 "redirect_uri": self.REDIRECT_URI,
                 "client_id": self.CLIENT_ID,
@@ -46,7 +46,7 @@ class Generate_token(Browser):
                 "grant_type":self.GRANT_TYPE
                 }
         response = requests.post(self.HOST + "/api/token", data=data, headers=header)
-        return response.json()["access_token"]
+        return response.json()['access_token']
 
     def authorization(self):
         self.create_authorize_endpoint()
@@ -56,4 +56,4 @@ class Generate_token(Browser):
             self.authorize_login()
         except:
             self.get_code()
-        return f"Bearer {self.get_token()}"
+        return f'Bearer {self.get_token()}'
